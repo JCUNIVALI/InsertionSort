@@ -3,34 +3,15 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include "InsertionSort.h"
+#include "Gera_Vetor.h"
 using namespace std;
 
-
-template <typename T>
-void InsertionSort(T vetor[], int primeiro, int ultimo) {
-	int menor = primeiro, escolha = vetor[primeiro], indice=0;
-	while (menor <= ultimo) {
-		if (vetor[menor] < escolha) {
-			escolha = vetor[menor];
-			indice = menor;
-		}
-		menor++;
-	}
-	while (indice > primeiro) {
-		vetor[indice] = vetor[indice - 1];
-		indice--;
-	}
-	vetor[primeiro] = escolha;
-	primeiro++;
-	if (primeiro < ultimo)
-		InsertionSort(vetor, primeiro, ultimo);
-}
 int main()
 {
-	int vetor[9] = { 5,6,8,4,1,2,7,10,-2 };
-	InsertionSort(vetor, 0, 8);
-	for (int x = 0;x < 9;x++) {
-		cout << vetor[x] << "\t";
-	}
+	int vetor[50];
+	Teste_Insertion_Sort(vetor, 50);
+	
+	system("pause");
 	return 0;
 }
