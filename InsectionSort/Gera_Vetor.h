@@ -12,7 +12,7 @@ void Teste_Insertion_Sort(T vetor, int tamanho) {
 		vetor[x] = rand() % 300;
 		cout << vetor[x] << "\t";
 	}
-	cout << endl;
+	cout << endl << endl;
 	InsertionSort(vetor, 0, tamanho-1);
 	for (int x = 0;x < tamanho;x++) {
 		cout << vetor[x] << "\t";

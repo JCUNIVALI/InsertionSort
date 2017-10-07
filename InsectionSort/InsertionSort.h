@@ -2,23 +2,19 @@
 #define INSERTIONSORT_H
 
 
-template <typename T>
-void InsertionSort(T vetor[], int primeiro, int ultimo) {
-	int menor = primeiro, escolha = vetor[primeiro], indice = 0;
-	while (menor <= ultimo) {
-		if (vetor[menor] < escolha) {
-			escolha = vetor[menor];
-			indice = menor;
-		}
-		menor++;
+template  <typename T>
+int InsertionSort(T vetor[], int primeiro, int ultimo) {
+	if (vetor[primeiro] > vetor[primeiro + 1]) {
+		int aux = vetor[primeiro];
+		vetor[primeiro] = vetor[primeiro + 1];
+		vetor[primeiro + 1] = aux;
+		if (primeiro - 1 >= 0)
+			return InsertionSort(vetor, primeiro - 1, ultimo);;
 	}
-	while (indice > primeiro) {
-		vetor[indice] = vetor[indice - 1];
-		indice--;
-	}
-	vetor[primeiro] = escolha;
 	primeiro++;
-	if (primeiro < ultimo)
-		InsertionSort(vetor, primeiro, ultimo);
+	if (primeiro< ultimo)
+		return InsertionSort(vetor, primeiro, ultimo);
+
 }
+
 #endif
