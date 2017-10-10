@@ -9,7 +9,7 @@ int InsertionSort(T vetor[], int primeiro, int ultimo) {
 		vetor[primeiro] = vetor[primeiro + 1];
 		vetor[primeiro + 1] = aux;
 		if (primeiro - 1 >= 0)
-			return InsertionSort(vetor, primeiro - 1, ultimo);;
+			return InsertionSort(vetor, primeiro - 1, ultimo);
 	}
 	primeiro++;
 	if (primeiro< ultimo)
