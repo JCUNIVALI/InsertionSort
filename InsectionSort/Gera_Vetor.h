@@ -9,7 +9,7 @@ template <typename T>
 void Teste_Insertion_Sort(T vetor, int tamanho) {
 	srand(time(NULL));
 	for (int x = 0;x < tamanho;x++) {
-		vetor[x] = rand() % 300;
+		vetor[x] = rand() % 50000;
 		cout << vetor[x] << "\t";
 	}
 	cout << endl << endl;

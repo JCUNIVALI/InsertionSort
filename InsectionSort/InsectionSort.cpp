@@ -5,12 +5,13 @@
 #include <iostream>
 #include "InsertionSort.h"
 #include "Gera_Vetor.h"
+#define tamanho 100000
 using namespace std;
 
 int main()
 {
-	int vetor[50];
-	Teste_Insertion_Sort(vetor, 50);
+	int vetor[tamanho];
+	Teste_Insertion_Sort(vetor, tamanho);
 	
 	system("pause");
 	return 0;
